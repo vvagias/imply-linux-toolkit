@@ -7,6 +7,7 @@ get your manager and agent urls here
 https://imply.io/get-started
 
 Now run
+
     ssh -i your.pem centos@ipaddress 'bash -s' < imply-linux-toolkit/imply-linux-manager-setup-headless.sh DOWNLOAD_URL
 
 Once that finishes running you can navigate to http://ipaddress:9097 for cluster manager
@@ -17,11 +18,11 @@ Now click create cluster and set any properties you wish
 
 !!! Ensure that Schema field is set to imply_manager
 
-run the following command with your IP PEM and CLUSTER_ID , NODE_TYPE
+run the following command with your <ipaddress> <your.pem> and CLUSTER_ID , NODE_TYPE, MANAGER_HOST(use internal ip to be safe) and the DOWNLOAD_URL(for the agent) 
 
     ssh -i your.pem centos@ipaddress 'bash -s' < imply-linux-toolkit/imply-linux-agent-setup-headless.sh CLUSTER_ID NODE_TYPE MANAGER_HOST DOWNLOAD_URL
 
-if you are feeling nervous ... that makes 2 of us :)
+if you are feeling nervous ... 
 
 try the test script first on any of the nodes to make sure everything is connected and ready...
 

@@ -64,7 +64,7 @@ sudo yum update -y
 update-crypto-policies --set LEGACY
 tar -xvf imply-agent-4.0.0.tar.gz
 yes yes| sudo imply-agent-4.0.0/script/install
-sudo su
+sudo chmod 777 /etc/opt/imply/agent.conf
 rm /etc/opt/imply/agent.conf
 cp agent.conf.tmp /etc/opt/imply/agent.conf
 chmod 777 /etc/opt/imply/agent.conf
